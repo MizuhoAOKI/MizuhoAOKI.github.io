@@ -16,6 +16,7 @@
     gtag('config', 'G-PS63CZ2F86');
   </script>
 
+  <!-- general settings -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -23,10 +24,19 @@
   <link rel ="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
-  <!-- Bulma Version 0.9.0-->
-  <link rel="stylesheet" href="https://unpkg.com/bulma@0.9.0/css/bulma.min.css" />
   <link rel="stylesheet" type="text/css" href="../css/personal.css">
   <script async type="text/javascript" src="../js/bulma.js"></script>
+
+  <!-- for modal -->
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/overlayscrollbars/1.9.1/css/OverlayScrollbars.min.css'>
+  <link rel="stylesheet" href="https://unpkg.com/bulma@0.9.0/css/bulma.min.css" />
+  <link rel="stylesheet" type="text/css" href="../css/hero.css">
+  <link rel="stylesheet" href="https://unpkg.com/bulma-modal-fx/dist/css/modal-fx.min.css" />
+  <style>
+  .columns:nth-child(2)
+  {margin-top: -10rem;}
+  </style>
+  
 </head>
 
 <body>
@@ -94,7 +104,7 @@
       <div class="card">
           <div class="card-image">
               <figure class="image">
-              <img src="./media/self_taken_photo.jpeg" alt="self_taken_photo">
+              <img src="./media/self_taken_photo.jpg" alt="self_taken_photo">
               </figure>
           </div>
           </div>
@@ -262,9 +272,9 @@
                   <img src="./media/aichallenge2022_simulation.png" alt="japanese_automotive_ai_challenge_2022_simulation">
                 </figure>
               </div>
-              <!-- <footer class="card-footer">
-                <a href="templates/admin.html" class="card-footer-item">More</a>
-              </footer> -->
+              <footer class="card-footer">
+                  <a class="card-footer-item is-link  modal-button" data-target="modal-card-aichallenge2022sim">More</a>
+              </footer>
             </div>
           </div>
 
@@ -283,9 +293,9 @@
                   <img src="./media/sce2022_multi_agent_demo.jpg" alt="sce2022_multi_agent_demo">
                 </figure>
               </div>
-              <!-- <footer class="card-footer">
-                <a href="templates/admin.html" class="card-footer-item">More</a>
-              </footer> -->
+              <footer class="card-footer">
+                <a class="card-footer-item is-link  modal-button" data-target="modal-card-sce2022">More</a>
+              </footer>
             </div>
           </div>
 
@@ -304,9 +314,9 @@
                   <img src="./media/aichallenge2022_integration.png" alt="japanese_automotive_ai_challenge_2022_integration">
                 </figure>
               </div>
-              <!-- <footer class="card-footer">
-                <a href="templates/admin.html" class="card-footer-item">More</a>
-              </footer> -->
+              <footer class="card-footer">
+                <a class="card-footer-item is-link  modal-button" data-target="modal-card-aichallenge2022int">More</a>
+              </footer>
             </div>
           </div>
 
@@ -324,14 +334,15 @@
       </div>
       <br>
 
+      
       <!-- 1st prize of AI Challenge -->
       <div class="card block">
         <header class="card-content">
           <span class="has-text-weight-bold mr-2">2023/03/06</span>
-          <span class="tag is-danger">NEW</span>
+          <span class="tag is-danger">New</span>
           <span class="tag is-info">Prize</span>
           <div class="mt-2">
-          Won 1st prize in Japan Automotive AI Challenge
+          Won 1st prize in Japan Automotive AI Challenge 2022 (simulation)
           </div>
         </header>
       </div>
@@ -352,6 +363,17 @@
           <a href="templates/admin.html" class="card-footer-item">Details</a>
           <a href="templates/admin.html" class="card-footer-item">See PDF</a>
         </footer> -->
+      </div>
+
+      <!-- 3rd prize of AI Challenge -->
+      <div class="card block">
+        <header class="card-content">
+          <span class="has-text-weight-bold mr-2">2022/06/26</span>
+          <span class="tag is-info">Prize</span>
+          <div class="mt-2">
+          Won 3rd prize in Japan Automotive AI Challenge 2022 (integration)
+          </div>
+        </header>
       </div>
 
       <!-- jigikai journal paper-->
@@ -456,6 +478,95 @@
       </p>
     </div>
   </footer>
-</body>
 
+  <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/N4oN3cmH9D8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
+
+    <!--  ===============
+    Write Hidden Modal Contents Below.
+    ===============  -->
+    <!-- start modal-card-aichallenge2022sim -->
+    <div id="modal-card-aichallenge2022sim" class="modal">
+      <div class="modal-background"></div>
+      <div class="modal-content">
+        <!-- content -->
+        <div class="card">
+          <div class="card-image">
+            <figure class="image is-4by3">
+              <img src="./media/aichallenge2022_simulation.png" alt="aichallenge2022_simulation">
+            </figure>
+          </div>
+          <div class="card-content">
+            <div class="content">
+              Check here for the movie : <a href="https://youtu.be/N4oN3cmH9D8">https://youtu.be/N4oN3cmH9D8</a>
+              <br>
+            </div>
+          </div>
+        </div>
+        <!-- end content -->
+      </div>
+      <button class="modal-close is-large" aria-label="close"></button>
+    </div>
+    <!-- end modal-card-aichallenge2022sim -->
+
+    <!-- start modal-card-sce2022 -->
+    <div id="modal-card-sce2022" class="modal">
+      <div class="modal-background"></div>
+      <div class="modal-content">
+        <!-- content -->
+        <div class="card">
+          <div class="card-image">
+            <figure class="image is-4by3">
+              <img src="./media/sce2022_multi_agent_demo.jpg" alt="sce2022">
+            </figure>
+          </div>
+          <div class="card-content">
+            <div class="content">
+              Official Website : <a href="https://www.smartcityexpo.com/">https://www.smartcityexpo.com/</a>
+              <br>
+            </div>
+          </div>
+        </div>
+        <!-- end content -->
+      </div>
+      <button class="modal-close is-large" aria-label="close"></button>
+    </div>
+    <!-- end modal-card-sce2022 -->
+
+    <!-- start modal-card-aichallenge2022int -->
+    <div id="modal-card-aichallenge2022int" class="modal">
+      <div class="modal-background"></div>
+      <div class="modal-content">
+        <!-- content -->
+        <div class="card">
+          <div class="card-image">
+            <figure class="image is-4by3">
+              <img src="./media/aichallenge2022_integration.png" alt="aichallenge2022_integration">
+            </figure>
+          </div>
+          <div class="card-content">
+            <div class="content">
+              Video recording of the competition : <a href="https://youtu.be/DUOCrdhPypU?t=232">https://youtu.be/DUOCrdhPypU?t=232</a>
+              <br>
+            </div>
+          </div>
+        </div>
+        <!-- end content -->
+      </div>
+      <button class="modal-close is-large" aria-label="close"></button>
+    </div>
+    <!-- end modal-card-aichallenge2022int -->
+
+    <!-- Scripts Needed For Modal -->
+    <script src="https://unpkg.com/bulma-modal-fx/dist/js/modal-fx.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/overlayscrollbars/1.9.1/js/OverlayScrollbars.min.js'></script>  
+    <script src="../js/wild.js"></script>
+        <script>
+        document.addEventListener("DOMContentLoaded", function() {
+        //The first argument are the elements to which the plugin shall be initialized
+        //The second argument has to be at least a empty object or a object with your desired options
+        OverlayScrollbars(document.querySelectorAll("body"), { });
+        });
+        </script>
+</body>
 </html>
