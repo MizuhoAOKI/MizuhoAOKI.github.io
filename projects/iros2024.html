@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Google tag (gtag.js) for google analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PS63CZ2F86"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-PS63CZ2F86');
+  </script>
+  <style>
+      .card {
+          border-radius: 2.00rem;
+      }
+  </style>
+
+  <!-- unique tag given by google search console -->
+  <meta name="google-site-verification" content="gq5j7CTEbR1B_o5BQwYdwrDK7aBt5rnKEYgqp4Lr770" />
+
+  <!-- general settings -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>IROS2024, MPPI for 4WIDS Vehicle Navigation, Mizuho Aoki</title>
+  <link rel ="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css"> <!-- import academicons -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="../css/personal.css">
+  <script async type="text/javascript" src="../js/bulma.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/bulma@0.9.0/css/bulma.min.css" />
+</head>
+
+<body>
+  <!-- Header -->
+  <section class="hero is-white is-small">
+    <div class="columns is-centered">
+    <div class="column is-8 has-text-centered">
+        <div class="hero-body">
+            <!-- title, author and important links -->
+            <div class="section">
+              <h1 class="title is-2 mb-6">Switching Sampling Space of Model Predictive Path-Integral Controller to Balance Efficiency and Safety in 4WIDS Vehicle Navigation</h1>
+              <h2 class="subtitle is-4"><a class="has-text-link" target="_blank", href="../index.html">Mizuho Aoki*</a>, 
+                                        <a class="has-text-link" target="_blank", href="https://kohonda.github.io/">Kohei Honda</a>, 
+                                        <a class="has-text-link" target="_blank", href="https://profs.provost.nagoya-u.ac.jp/html/100006425_en.html">Hiroyuki Okuda</a>, 
+                                        <a class="has-text-link" target="_blank", href="https://www.suzlab.mae.nagoya-u.ac.jp/suzuki/index_e.html">Tatsuya Suzuki</a>
+              </h2>
+              <h3 class="subtitle is-5">Nagoya University</h3>
+                <!-- paper -->
+                <a target="_blank" class="button is-rounded is-link is-medium is-outlined" href="../media/papers/IROS2024_paper_mizuhoaoki.pdf">
+                    <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper</span>
+                </a>
+                <!-- arxiv -->
+                <a target="_blank" class="button is-rounded is-link is-medium is-outlined" href="https://arxiv.org/abs/2409.08648">
+                    <span class="icon">
+                        <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                </a>
+                <!-- poster -->
+                <a target="_blank" class="button is-rounded is-link is-medium is-outlined" href="./iros2024_poster.pdf">
+                    <span class="icon">
+                        <i class="fa-solid fa-broom-ball"></i>
+                    </span>
+                    <span>Poster</span>
+                </a>
+                <!-- code -->
+                <a target="_blank" class="button is-rounded is-link is-medium is-outlined" href="https://github.com/MizuhoAOKI/mppi_swerve_drive_ros">
+                    <span class="icon">
+                        <i class="fa-brands fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                </a>                
+            </div>
+
+            <!-- demo movie -->
+            <div class="section">
+                <h2 class="title is-3 mb-6">Overview Video</h2>
+                <div class="columns is-centered">
+                    <!-- movie title -->
+                    <div class="column is-12">
+                        <figure class="image is-16by9">
+                        <iframe class="has-ratio" width="560" height="315"
+                        src="https://www.youtube.com/embed/c0psufuvrzM?si=PT8UljwXi1v6vLk5" 
+                        title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                        </iframe>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+  </section>
+
+  <!-- Section "abstract" -->
+  <section class="section has-background-light" id="abstract">
+    <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8 has-text-centered">
+        <!-- content -->
+        <div class="content">
+            <h3 class="title is-3">Abstract</h3>
+            <p>
+                Four-wheel independent drive and steering vehicle (4WIDS Vehicle, Swerve Drive Robot) has the ability to move in any direction by its eight degrees of freedom (DoF) control inputs. Although the high maneuverability enables efficient navigation in narrow spaces, obtaining the optimal command is challenging due to the high dimension of the solution space. This paper presents a navigation architecture using the Model Predictive Path Integral (MPPI) control algorithm to avoid collisions with obstacles of any shape and reach a goal point. The key idea to make the problem easier is to explore the optimal control input in a reasonably reduced dimension that is adequate for navigation. Through evaluation in simulation, we found that selecting the sampling space of MPPI greatly affects navigation performance. In addition, our proposed controller which switches multiple sampling spaces according to the real-time situation can achieve balanced behavior between efficiency and safety. Source code is available at <a class="has-text-link" target="_blank" href="https://github.com/MizuhoAOKI/mppi_swerve_drive_ros">https://github.com/MizuhoAOKI/mppi_swerve_drive_ros</a>.
+            </p>
+        </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section "poster" -->
+  <section class="section" id="topic">
+    <div class="container">
+        <div class="columns is-centered">
+          <div class="column is-10 has-text-centered">
+            <!-- content -->
+            <div class="content">
+                <h3 class="title is-3">Poster</h3>
+                <!-- movie title -->
+                <div class="column is-12">
+                    <img src="./iros2024_poster.png" alt="poster">
+                </div>
+            </div>
+            </div>
+          </div>
+        </div>
+  </section>
+
+  <!-- Section "demonstration" -->
+  <section class="section has-background-light" id="topic">
+    <div class="container">
+        <div class="columns is-centered">
+          <div class="column is-10 has-text-centered">
+            <!-- content -->
+            <div class="content">
+                <h3 class="title is-3">Demonstration of Proposed MPPI Controller for 4WIDS Vehicle Navigation</h3>
+                <div class="columns is-centered">
+                    <div class="column is-12">
+                        <figure class="image is-16by9">
+                            <iframe class="has-ratio" width="560" height="315" src="https://www.youtube.com/embed/9c6oZRWHOnI?si=5iSOMmVrTu8Z7UpD" 
+                            title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                            </iframe>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+            </div>
+          </div>
+        </div>
+  </section>
+
+  <!-- Section "citation" -->
+  <section class="section" id="citation">
+    <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8 has-text-centered">
+        <!-- section title -->
+        <div class="section-heading">
+            <h3 class="title is-3 mb-4">Citation</h3>
+        </div>
+        <br>
+        <!-- citation info -->
+        <div class="content">
+<pre class="has-text-left is-family-sans-serif is-size-6">
+
+@inproceedings{aoki2024iros,
+    title={Switching Sampling Space of Model Predictive Path-Integral Controller to Balance Efficiency and Safety in 4WIDS Vehicle Navigation},
+    author={Aoki, Mizuho and Honda, Kohei and Okuda, Hiroyuki and Suzuki, Tatsuya},
+    booktitle={2024 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)}, 
+    year={2024}}
+
+</pre>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section "contact" -->
+  <section class="section" id="contact">
+    <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-5 has-text-centered">
+        <!-- section title -->
+        <div class="section-heading">
+            <h3 class="title is-3 mb-4">Contact</h3>
+        </div>
+        <br>
+        <!-- contact info -->
+        <div class="card has-text-left">
+            <div class="card-content">
+                <div class="content">
+                    <div>
+                    <span class="icon">
+                        <i class="fas fa-envelope"></i>
+                    </span>
+                    <a href="mailto:mizuhoaoki1998@gmail.com">mizuhoaoki1998@gmail.com</a>
+                    </div>
+                    <div>
+                    <span class="icon">
+                        <i class="fa-brands fa-twitter"></i>
+                    </span>
+                    <a href="https://twitter.com/mizuhoaoki1998">mizuhoaoki1998</a>
+                    </div>
+                    <div>
+                    <span class="icon">
+                        <i class="fa-brands fa-github"></i>
+                    </span>
+                    <a href="https://github.com/MizuhoAOKI" target="_blank">MizuhoAOKI</a>
+                    </div>
+                </div>
+            </div>
+          </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="section-heading">
+      <p>
+        Copyright © <strong>2024</strong> Mizuho Aoki. All Rights Reserved.
+      </p>
+      <!-- activate follows when you use google analytics-->
+      <p>
+        This site uses Google Analytics, a service provided by Google, to analyze and improve the site.
+        This service uses cookies to collect traffic data. Traffic data is collected anonymously and does not personally identify you.
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>
