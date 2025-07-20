@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Google tag (gtag.js) for google analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PS63CZ2F86"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-PS63CZ2F86');
+  </script>
+  <style>
+      .card {
+          border-radius: 2.00rem;
+      }
+  </style>
+
+  <!-- unique tag given by google search console -->
+  <meta name="google-site-verification" content="gq5j7CTEbR1B_o5BQwYdwrDK7aBt5rnKEYgqp4Lr770" />
+
+  <!-- general settings -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Nullspace MPC</title>
+  <link rel ="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css"> <!-- import academicons -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="../css/personal.css">
+  <link rel="stylesheet" href="https://unpkg.com/bulma@0.9.0/css/bulma.min.css" />
+</head>
+
+<body>
+  <!-- Header -->
+  <section class="section has-background-white">
+    <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-10 has-text-centered">
+        <div class="contents">
+            <!-- title, author and important links -->
+            <div class="section">
+              <h1 class="title is-2 is-size-4-mobile mb-6">Nullspace MPC</h1>
+              <h2 class="subtitle is-4 is-size-5-mobile"><a class="has-text-link" target="_blank", href="../index.html">Mizuho Aoki</a> 
+              </h2>
+              <h3 class="subtitle is-5 is-size-6-mobile">Nagoya University</h3>
+                <!-- code -->
+                <a target="_blank" class="button is-rounded is-link is-medium is-outlined" href="https://github.com/MizuhoAOKI/nullspace_mpc">
+                    <span class="icon">
+                        <i class="fa-brands fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                </a>                
+            </div>
+
+            <!-- demo movie -->
+            <div class="section">
+                <h2 class="title is-3 is-size-4-mobile mb-6">Demonstration</h2>
+                <!-- movie caption -->
+                <h3 class="subtitle is-5 is-size-6-mobile">Demonstrating agile and smooth navigation through a narrow environment with a swerve drive vehicle.</h3>
+                <div class="columns is-centered">
+                    <div class="column is-12">
+                        <!-- mp4 movie -->
+                        <video src="../media/nullspace_mpc_demo.mp4" width="720px" autoplay loop muted playsinline>
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+  </section>
+
+  <!-- Section "abstract" -->
+  <section class="section has-background-light" id="abstract">
+    <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <!-- content -->
+        <div class="content">
+            <h3 class="title is-3 is-size-4-mobile has-text-centered">Overview</h3>
+            <p class="has-text-left">
+                <span class="has-text-weight-bold">Nullspace Model Predictive Control (Nullspace MPC)</span> is a novel, hierarchical motion planning framework designed for online, receding-horizon control. 
+                Its core motivation is to handle multiple objectives via a strict task hierarchy. This approach largely mitigates the difficult and often unreliable process of tuning weight parameters found in conventional single-cost-function methods.
+                To resolve a diverse range of complex tasks with real-time efficiency, the framework intelligently decomposes the control problem according to the nature of the tasks. 
+                A sampling-based optimizer handles the global, nonlinear aspects of motion, such as roughly shaping the overall path to avoid arbitrarily shaped obstacles. 
+                Meanwhile, a gradient-based solver addresses local, linear tasks by strictly enforcing constraints like velocity/acceleration bounds and ensuring trajectory smoothness.
+                As a result, Nullspace MPC provides navigation through narrow environments with an omni-directional vehicle that is demonstrably safer and more agile than the conventional method, MPPI.
+            </p>
+            <p>
+                Note: This project forms a core part of my Ph.D. dissertation, which will be publicly available on October 1, 2025.
+            </p>
+        </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section "algorithm" -->
+  <section class="section" id="algorithm">
+    <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8 has-text-centered">
+        <!-- content -->
+        <div class="content">
+            <h3 class="title is-3 is-size-4-mobile">Algorithm</h3>
+            <p>
+                Coming Soon ...
+            </p>
+        </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section "comparison_between_previous_approach" -->
+  <section class="section has-background-light" id="comparison">
+    <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8 has-text-centered">
+        <!-- content -->
+        <div class="content">
+            <h3 class="title is-3 is-size-4-mobile">Comparison Between Previous Approach</h3>
+            <p>
+                Coming Soon ...
+            </p>
+        </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section "citation" -->
+  <section class="section" id="citation">
+    <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8 has-text-centered">
+        <!-- section title -->
+        <div class="section-heading">
+            <h3 class="title is-3 is-size-4-mobile mb-4">Citation</h3>
+        </div>
+        <br>
+        <!-- citation info -->
+        <div class="content">
+<pre class="has-text-left is-family-sans-serif is-size-6 is-size-7-mobile">
+
+    This project forms a core part of my Ph.D. dissertation, which will be publicly available on October 1, 2025.
+    I will add citation information to the dissertation and related publications here as soon as they are available.
+
+</pre>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section "contact" -->
+  <section class="section" id="contact">
+    <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-5 has-text-centered">
+        <!-- section title -->
+        <div class="section-heading">
+            <h3 class="title is-3 is-size-4-mobile mb-4">Contact</h3>
+        </div>
+        <br>
+        <!-- contact info -->
+        <div class="card has-text-left">
+            <div class="card-content">
+                <div class="content">
+                    <div>
+                    <span class="icon">
+                        <i class="fas fa-envelope"></i>
+                    </span>
+                    <a href="mailto:mizuhoaoki1998@gmail.com" target="_blank">mizuhoaoki1998@gmail.com</a>
+                    </div>
+                    <div>
+                    <span class="icon">
+                        <i class="fa-brands fa-twitter"></i>
+                    </span>
+                    <a href="https://twitter.com/mizuhoaoki1998" target="_blank">mizuhoaoki1998</a>
+                    </div>
+                    <div>
+                    <span class="icon">
+                      <i class="fa-brands fa-linkedin"></i>
+                    </span>
+                    <a href="https://www.linkedin.com/in/mizuho-aoki-74a369251/" target="_blank">in/mizuho-aoki-74a369251</a>
+                    </div>
+                    <div>
+                      <span class="icon">
+                        <i class="fa-brands fa-github"></i>
+                      </span>
+                      <a href="https://github.com/MizuhoAOKI" target="_blank">MizuhoAOKI</a>
+                    </div>
+                </div>
+            </div>
+          </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="section-heading">
+      <p>
+        Copyright © <strong>2025</strong> Mizuho Aoki. All Rights Reserved.
+      </p>
+      <!-- activate follows when you use google analytics-->
+      <p>
+        This site uses Google Analytics, a service provided by Google, to analyze and improve the site.
+        This service uses cookies to collect traffic data. Traffic data is collected anonymously and does not personally identify you.
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>
