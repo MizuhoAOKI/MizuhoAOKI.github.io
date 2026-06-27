@@ -22,7 +22,6 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Portfolio of MizuhoAOKI</title>
   <link rel ="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="../css/personal.css">
   <script async type="text/javascript" src="../js/bulma.js"></script>
@@ -36,7 +35,7 @@
   .columns:nth-child(2)
   {margin-top: -10rem;}
   </style>
-  
+
   <!-- unique tag given by google search console -->
   <meta name="google-site-verification" content="gq5j7CTEbR1B_o5BQwYdwrDK7aBt5rnKEYgqp4Lr770" />
 </head>
@@ -44,6 +43,7 @@
 <body>
   <!-- Navigation bar -->
   <nav class="navbar is-link is-fixed-top">
+    <div class="container">
     <div class="navbar-brand">
       <div class="navbar-burger burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
         <span aria-hidden="true"></span>
@@ -80,39 +80,36 @@
         </a>
       </div>
     </div>
+    </div>
   </nav>
 
   <!-- Header -->
-  <section class="hero is-link is-large">
-    <div class="columns is-centered">
-    <div class="column is-8">
-    <div class="columns is-vcentered">
-    <!-- left side -->
-    <div class="column is-7">
+  <section class="hero is-link is-medium">
     <div class="hero-body">
       <div class="container">
-        <h1 class="title is-1">
-          Mizuho AOKI
-        </h1>
-        <h2 class="subtitle is-3">
-          Postdoctral Researcher in Robotics and Autonomous Driving
-        </h2>
-      </div>
-    </div>
-    </div>
-    <!-- right side -->
-    <div class="column is-5">
-      <!-- Profile picture -->
-      <div class="card">
-          <div class="card-image">
-              <figure class="image">
-              <img src="./media/self_taken_photo.jpg" alt="self_taken_photo">
-              </figure>
+        <div class="columns is-vcentered">
+          <!-- left side -->
+          <div class="column is-7">
+            <h1 class="title is-1">
+              Mizuho AOKI
+            </h1>
+            <h2 class="subtitle is-3">
+                Researcher Working on Motion Planning and Control in Robotics and Autonomous Driving
+            </h2>
           </div>
+          <!-- right side -->
+          <div class="column is-5">
+            <!-- Profile picture -->
+            <div class="card">
+              <div class="card-image">
+                <figure class="image">
+                  <img src="./media/self_taken_photo.jpg" alt="self_taken_photo">
+                </figure>
+              </div>
+            </div>
           </div>
+        </div>
       </div>
-    </div>
-    </div>
     </div>
   </section>
 
@@ -121,7 +118,7 @@
     <div class="container">
       <div class="section-heading">
         <h3 class="title is-2">About Me</h3>
-        <h4 class="subtitle is-5">Postdoctral researcher working on motion planning and control in the fields of robotics and autonomous driving. </h4>
+        <h4 class="subtitle is-5">Researcher working on motion planning and control in robotics and autonomous driving.</h4>
       </div>
       <br>
 
@@ -145,7 +142,8 @@
                   <th colspan="1"></th>
                   <th colspan="2"></th>
                 </tr>
-                <tr>
+                <!-- TODO: update CV -->
+                <!-- <tr>
                   <td>Curriculum Vitae</td>
                   <td>
                     <span class="icon">
@@ -153,7 +151,7 @@
                     </span>
                     <a href="./media/cv_mizuhoaoki.pdf" target="_blank">CV.pdf</a>
                   </td>
-                </tr>
+                </tr> -->
                 <tr>
                   <td>Researchmap Profile</td>
                   <td><a href="https://researchmap.jp/mizuhoaoki" target="_blank">https://researchmap.jp/mizuhoaoki</a></td>
@@ -164,17 +162,11 @@
                 </tr>
                 <tr>
                   <td>Affiliation</td>
-                  <td><a href="https://en.nagoya-u.ac.jp/">Nagoya University</a></td>
-                </tr>
-                <tr>
-                  <td>Department</td>
-                  <td>Mechanical Systems Engineering</td>
+                  <td><a href="https://www.aist.go.jp/index_en.html" target="_blank">AIST; National Institute of Advanced Industrial Science and Technology</a></td>
                 </tr>
                 <tr>
                   <td>Laboratory</td>
-                  <td class="is-vcentered">
-                    <a href="https://www.suzlab.mae.nagoya-u.ac.jp/en/">Suzuki Tatsuya Lab</a>
-                  </td>
+                  <td><a href="https://www.digiarc.aist.go.jp/team/smrt/" target="_blank">SMRG; Smart Mobility Research Group</a></td>
                 </tr>
                 <tr>
                   <td>Interests</td>
@@ -184,7 +176,7 @@
                     <li>Model Predictive Control (MPC)</li>
                     <li>Model Predictive Path-Integral (MPPI) Control</li>
                     <li>Reinforcement Learning</li>
-                    <li>Diffusion-based algorithms</li>
+                    <li>Generative Models (diffusion/flow matching)</li>
                     </ul>
                   </td>
                 </tr>
@@ -291,7 +283,7 @@
               </header>
               <div class="card-content">
                 <video autoplay loop muted="yes" playsinline>
-                  <source src="./media/nullspace_mpc_demo.mp4" type="video/mp4" />
+                  <source src="./media/nullspace_mpc_demo.mp4" preload="none" type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
               </div>
@@ -312,6 +304,34 @@
             </div>
           </div>
 
+          <!-- [OSS] jax_generative_models -->
+          <div class="column is-4">
+            <div class="card">
+              <header class="card-header">
+                <p class="card-header-title">
+                  <span class="tag is-primary mr-2">OSS</span>
+                  <span>jax_generative_models</span>
+                  <span class="is-pulled-right">
+                  </span>
+                </p>
+              </header>
+              <div class="card-content">
+                <video autoplay loop muted="yes" playsinline>
+                  <source src="./media/jax_generative_models.mp4" preload="none" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+              <footer class="card-footer">
+                  <a class="card-footer-item is-link modal-button" href="https://github.com/MizuhoAOKI/jax_generative_models" target="_blank">
+                    <span class="icon">
+                      <i class="fa-brands fa-github"></i>
+                    </span>
+                    Github
+                  </a>
+              </footer>
+            </div>
+          </div>
+
           <!-- IROS2024 -->
           <div class="column is-4">
             <div class="card">
@@ -325,7 +345,7 @@
               </header>
               <div class="card-content">
                 <video autoplay loop muted="yes" playsinline>
-                  <source src="./media/demo_4wids_iros2024.mp4" type="video/mp4" />
+                  <source src="./media/demo_4wids_iros2024.mp4" preload="none" type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
               </div>
@@ -359,7 +379,7 @@
               </header>
               <div class="card-content">
                 <video autoplay loop muted="yes" playsinline>
-                  <source src="./media/f1tenth_highlight.mp4" type="video/mp4" />
+                  <source src="./media/f1tenth_highlight.mp4" preload="none" type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
               </div>
@@ -387,7 +407,7 @@
               </header>
               <div class="card-content">
                 <video autoplay loop muted="yes" playsinline>
-                  <source src="./media/python_simple_mppi.mp4" type="video/mp4" />
+                  <source src="./media/python_simple_mppi.mp4" preload="none" type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
               </div>
@@ -415,7 +435,7 @@
               </header>
               <div class="card-content">
                 <video autoplay loop muted="yes" playsinline>
-                  <source src="./media/aichallenge2022sim_for_thumbnail.mp4" type="video/mp4" />
+                  <source src="./media/aichallenge2022sim_for_thumbnail.mp4" preload="none" type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
               </div>
@@ -443,7 +463,7 @@
               </header>
               <div class="card-content">
                 <video autoplay loop muted="yes" playsinline>
-                  <source src="./media/path_tracking_catalog_for_thumbnail.mp4" type="video/mp4" />
+                  <source src="./media/path_tracking_catalog_for_thumbnail.mp4" preload="none" type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
               </div>
@@ -459,7 +479,7 @@
           </div> -->
 
           <!-- Smart City Expo -->
-          <div class="column is-4">
+          <!-- <div class="column is-4">
             <div class="card">
               <header class="card-header">
                 <p class="card-header-title">
@@ -470,7 +490,7 @@
               </header>
               <div class="card-content">
                 <video autoplay loop muted="yes" playsinline>
-                  <source src="./media/multi_agent_demo_for_thumbnail.mp4" type="video/mp4" />
+                  <source src="./media/multi_agent_demo_for_thumbnail.mp4" preload="none" type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
               </div>
@@ -483,7 +503,7 @@
                 </a>
               </footer>
             </div>
-          </div>
+          </div> -->
 
           <!-- AI Challenge 3rd-->
           <!-- <div class="column is-4">
@@ -526,7 +546,36 @@
       </div>
       <br>
 
-      <!-- TODO add a card of phd dissertation -->
+      <!-- VLG-Loc -->
+      <div class="card block">
+        <div class="card-content">
+          <span class="has-text-weight-bold mr-2">2025/12</span>
+          <span class="tag is-success">Preprint</span>
+          <div class="mt-2 mb-2">
+            <span class="has-text-weight-semibold">Mizuho Aoki</span>, Kohei Honda, Yasuhiro Yoshimura, Takeshi Ishita, Ryo Yonetani, "VLG-Loc: Vision-Language Global Localization from Labeled Footprint Maps", arXiv preprint arXiv:2512.12793, 2025 (Research internship at CyberAgent AI Lab)
+          </div>
+          <a class="button is-outlined is-small" href="https://cyberagentailab.github.io/VLG-Loc-project-page/" target="_blank">Website</a>
+          <a class="button is-outlined is-small" href="https://arxiv.org/abs/2512.12793" target="_blank">PDF</a>
+          <a class="button is-outlined is-small" href="https://github.com/CyberAgentAILab/VLG-Loc" target="_blank">Code</a>
+          <a class="button is-outlined is-small" href="https://huggingface.co/datasets/cyberagent/VLG-Loc-Dataset" target="_blank">Dataset</a>
+          <a class="button is-outlined is-small" href="https://youtu.be/htKZUpajZfo" target="_blank">Video</a>
+        </div>
+      </div>
+
+      <!-- Ph.D. Dissertation -->
+      <div class="card block">
+        <div class="card-content">
+          <span class="has-text-weight-bold mr-2">2025/09/29</span>
+          <span class="tag is-success">Ph.D. Dissertation</span>
+          <div class="mt-2 mb-2">
+            <span class="has-text-weight-semibold">Mizuho Aoki</span>, "Nonlinear Model Predictive Control for Autonomous Vehicles: Enhancement via Simplified Physics-Aware Prediction and Decomposed Optimization", Ph.D. Dissertation, Nagoya University, 2025
+          </div>
+          <a class="button is-outlined is-small" href="https://mizuhoaoki.com/projects/nullspace_mpc.html" target="_blank">Website</a>
+          <a class="button is-outlined is-small" href="https://mizuhoaoki.com/projects/phd_dissertation_mizuhoaoki.pdf" target="_blank">PDF</a>
+          <a class="button is-outlined is-small" href="https://github.com/MizuhoAOKI/nullspace_mpc" target="_blank">Code</a>
+          <a class="button is-outlined is-small" href="https://nagoya.repo.nii.ac.jp/records/2013429" target="_blank">Repository</a>
+        </div>
+      </div>
 
       <!-- sice journal paper 2025 -->
       <div class="card block">
@@ -831,7 +880,7 @@
   <footer class="footer">
     <div class="section-heading">
       <p>
-        Copyright © <strong>2024</strong> Mizuho Aoki. All Rights Reserved.
+        Copyright © <strong>2026</strong> Mizuho Aoki. All Rights Reserved.
       </p>
       <p>
         This site uses Google Analytics, a service provided by Google, to analyze and improve the site.
